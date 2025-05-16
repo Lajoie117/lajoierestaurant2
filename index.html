@@ -5,12 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La Joie - Sri Lankan Food</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      color: #144734;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: sans-serif;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <div class="overlay">
     <h1>La Joie</h1>
 
-    <!-- Adresse cliquable vers Google Maps -->
+    <!-- Adresse cliquable -->
     <p>
       <a
         href="https://maps.app.goo.gl/9evbvLpcWmPzKYnNA"
@@ -25,4 +52,12 @@
   </div>
 
   <script>
-    document
+    // Redirection vers Instagram si clic en dehors d'un lien
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('a')) {
+        window.location.href = 'https://www.instagram.com/la_joie_srilankan_food/';
+      }
+    });
+  </script>
+</body>
+</html>
