@@ -6,28 +6,34 @@
   <title>La Joie - Sri Lankan Food</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    /* Arrière-plan image pleine page */
     body {
       margin: 0;
       padding: 0;
+      background: url('PHOTO-2025-05-14-18-37-02.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: sans-serif;
+      color: #144734;
     }
+
     .overlay {
       position: absolute;
       top: 0; left: 0;
       width: 100%;
       height: 100%;
       z-index: 2;
-      color: #144734;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      font-family: sans-serif;
     }
+
     a {
-      color: inherit;
+      color: #144734;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
@@ -39,10 +45,7 @@
 
     <!-- Adresse cliquable -->
     <p>
-      <a
-        href="https://maps.app.goo.gl/9evbvLpcWmPzKYnNA"
-        target="_blank" rel="noopener"
-      >
+      <a href="https://maps.app.goo.gl/9evbvLpcWmPzKYnNA" target="_blank" rel="noopener">
         117 rue du chemin vert, 75011 Paris
       </a>
     </p>
@@ -56,7 +59,7 @@
   </div>
 
   <script>
-    // Redirection vers Instagram si clic en dehors d'un lien
+    // Clic sur le fond redirige vers Instagram sauf sur les liens
     document.addEventListener('click', function (e) {
       if (!e.target.closest('a')) {
         window.location.href = 'https://www.instagram.com/la_joie_srilankan_food/';
