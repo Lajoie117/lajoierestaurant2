@@ -17,40 +17,5 @@ body {
   padding: 2rem;
 }
 
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <div class="overlay">
-    <h1>La Joie</h1>
-
-    <!-- Adresse cliquable -->
-    <p>
-      <a href="https://maps.app.goo.gl/9evbvLpcWmPzKYnNA" target="_blank" rel="noopener">
-        117 rue du chemin vert, 75011 Paris
-      </a>
-    </p>
-
-    <!-- Numéro de téléphone cliquable -->
-    <p>
-      <a href="tel:+33180871719">
-        +33 1 80 87 17 19
-      </a>
-    </p>
-  </div>
-
-  <script>
-    // Redirection vers Instagram quand on clique en dehors des liens
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('a')) {
-        window.location.href = 'https://www.instagram.com/la_joie_srilankan_food/';
-      }
-    });
-  </script>
 </body>
 </html>
